@@ -9,10 +9,12 @@
         integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
     <script src="https://kit.fontawesome.com/773142ba9b.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
     <title>Whiskey Drop | Taste a new whiskey every month</title>
 </head>
 
 <body>
+    <!-- Navigation bar -->
     <nav class="navbar navbar-light bg-light navbar-expand-sm">
         <a href="/" class="navbar-brand">Whiskey Drop</a>
         <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
@@ -42,16 +44,21 @@
             <a href="/Login">Sign in / Sign Up</a>
         </div>
     </nav>
-    <article class="container mt-3">
-        <div class="row d-none d-sm-block">
-            <div class="col-12">
-                <div class="alert alert-warning">
-                    <strong>Sale Now On!</strong> We've got a sale on. Get a 12 month subscription for the price of 6!
-                    <a href="">See here for more details</a>
-                </div>
-            </div>
-        </div>
-        <!-- Callout -->
+    <!--/Navigation bar-->
+    <!-- Alert -->
+    <!--<div class="container alert-container">-->
+    <!--    <div class="row d-none d-sm-block">-->
+    <!--        <div class="col-12">-->
+    <!--            <div class="alert alert-warning">-->
+    <!--                <strong>Sale Now On!</strong> We've got a sale on. Get a 12 month subscription for the price of 6! <a href="">See here for more details</a>-->
+    <!--            </div>-->
+    <!--        </div>-->
+    <!--    </div>-->
+    <!--</div>-->
+    <!-- /Alert -->
+
+    <!-- Callout -->
+    <div class="container-fluid callout-container">        
         <div class="row">
             <div class="col-12">
                 <section class="callout jumbotron mt-3 text-center">
@@ -60,16 +67,18 @@
                         <s class="d-none d-sm-inline">19.99€</s>
                         <span class="d-inline d-sm-none"><br></span>
                         <strong><mark>First one is free!</strong></mark></p>
-                    <button class="btn btn-success btn-lg" data-toggle= "modal" data-target = "#signUpModal">Sign up!</button>
+                    <button class="btn btn-success btn-lg" data-toggle="modal" data-target="#signUpModal">Sign
+                        up!</button>
                     <p class="text-muted"><small>You must be over 18 to sign up to our services.Please, drink
                             responsibly.</small></p>
                 </section>
             </div>
         </div>
-        <!-- /.callout -->
-        <hr>
+    </div>
+    <!-- /.callout -->
 
-        <!-- Quotes -->
+    <!-- Quotes -->
+    <div class="container quotes-container">
         <section class="quotes">
             <div class="row">
                 <div class="col-12 my-5">
@@ -111,10 +120,11 @@
                 </div>
             </div>
         </section>
-        <!-- /.quotes -->
-        <hr>
+    </div>
+    <!-- /.quotes -->
 
-        <!-- Features -->
+    <!-- Features -->
+    <div class="features-container">
         <section class="features">
             <div class="row">
                 <div class="col-12 my-5">
@@ -162,41 +172,44 @@
             </div>
         </section>
         <!-- /.features -->
-    </article>
+    </div>
 
     <!--Modal -->
     <div class="modal" tabindex="-1" role="dialog" id="signUpModal">
         <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title">Sign Up to Whiskey Drop</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Sign Up to Whiskey Drop</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Email address</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1"
+                                aria-describedby="emailHelp" placeholder="Enter email">
+                            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                                else.</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" class="form-control" id="password" placeholder="Password">
+                        </div>
+                        <div class="form-group">
+                            <label for="repeatPassword"> Repeat Password</label>
+                            <input type="password" class="form-control" id="repeatPassword"
+                                placeholder="Repeat Password">
+                        </div>
+
+                        <button type="submit" class="btn btn-success">Submit</button>
+                    </form>
+                </div>
+
             </div>
-            <div class="modal-body">
-                <form>
-                    <div class="form-group">
-                      <label for="exampleInputEmail1">Email address</label>
-                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-                      <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-                    </div>
-                    <div class="form-group">
-                      <label for="password">Password</label>
-                      <input type="password" class="form-control" id="password" placeholder="Password">
-                    </div>
-                    <div class="form-group">
-                        <label for="repeatPassword"> Repeat Password</label>
-                        <input type="password" class="form-control" id= "repeatPassword" placeholder="Repeat Password">
-                      </div>
-                    
-                    <button type="submit" class="btn btn-success">Submit</button>
-                  </form>
-            </div>
-            
-          </div>
         </div>
-      </div>    
+    </div>
 
 </body>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
